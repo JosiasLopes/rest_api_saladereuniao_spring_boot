@@ -17,6 +17,4 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
  
-#####Este projeto é uma pequena api criada em springBoot para criação e gerenciamento basico de uma sala de conferência com uma unica entity
-#####O Banco de dados é o banco H2( banco executado em memória).
-#####A finalidade desse pequeno projeto é prover uma api para ser consumida em um projeto Angular
+#####Este projeto é uma pequena api criada em springBoot para criação e gerenciamento basico de uma sala de conferência com uma unica entityO Banco de dados é o banco H2( banco executado em memória).A finalidade desse pequeno projeto é prover uma api para ser consumida em um projeto Angular
