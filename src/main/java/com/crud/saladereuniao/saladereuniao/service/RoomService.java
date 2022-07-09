@@ -22,6 +22,8 @@ public class RoomService {
 
     }
 
+
+//traz o response Entitu de room ou retorna exception
     public ResponseEntity<Room> getRoomById(Long id){
         Optional<Room> opt = roomRepo.findById(id);
         if(opt.isPresent()){

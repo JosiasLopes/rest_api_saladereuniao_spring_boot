@@ -41,11 +41,15 @@ public class RoomController {
     public ResponseEntity<Room> updateRoom(@PathVariable(value="id") Long id, @Valid @RequestBody Room details){
             Room tmp = roomService.getRoomById(id).getBody();
             Room tmp2;
+	   //caso o tmp seja diferente de null
+	   //pega as informações do requestBody e subsititui
+	  //depois depois sava essas informações e retorna um response	
             if(tmp!=null){
                 tmp.setName(details.getName());
                 tmp.setData(details.getData());
                 tmp.setStartHour(details.getStartHour());
                 tmp.setEndHour(details.getEndHour());
+
                 tmp2= roomService.saveRoom(tmp);
                 return ResponseEntity.ok(tmp2);
             }else{

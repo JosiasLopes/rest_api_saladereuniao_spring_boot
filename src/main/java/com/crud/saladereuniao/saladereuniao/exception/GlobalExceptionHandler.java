@@ -19,6 +19,12 @@ public class GlobalExceptionHandler{
         return new ResponseEntity<>(detalhes,HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<?> userNotFoundException(UserNotFoundException ex, WebRequest request){
+        ErrorDatails detalhes = new ErrorDatails(new Date(),ex.getMessage(), request.getDescription(false));
+        return new ResponseEntity<>(detalhes,HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> globalExceptionHandler(Exception ex, WebRequest request){
         ErrorDatails detalhes = new ErrorDatails(new Date(),ex.getMessage(), request.getDescription(false));
