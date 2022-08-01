@@ -14,9 +14,9 @@ public class SaladereuniaoApplication {
 	}
 
 	//configura o Bean do restTemplate
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
+	//@Bean
+//	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+		//return builder.build();
+	//}
 
 }
